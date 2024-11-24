@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org" lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineBar - Página de cadastro</title>
+    <link rel="stylesheet" th:href="@{/css/layoutGeral.css}">
+    <link rel="stylesheet" th:href="@{/css/cadastrar.css}">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a th:href="@{/}">
+                <img id="logo" th:src="@{/imgs/logo.png}" alt="Logo CineBar">
+            </a>
+            <ul>
+                <li><a th:href="@{/}">Home</a></li>
+                <li><a th:href="@{/preferidos}">Preferidos</a></li>
+                <li><a th:href="@{/cadastrar}">Cadastrar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <h1>Página de atualização</h1>
+        <form th:action="@{'/atualizar/' + ${id}}" method="post" th:object="${filme}">
+            <label for="titulo">Título:</label>
+            <input type="text" id="titulo" name="titulo" th:field="*{titulo}" required><br><br>
+
+            <label for="genero">Gênero:</label>
+            <input type="text" id="genero" name="genero" th:field="*{genero}" required><br><br>
+
+            <label for="ano">Ano de Lançamento:</label>
+            <input type="text" id="ano" name="ano" th:field="*{ano}" required placeholder="Ex: 2023"><br><br>
+
+            <label for="diretor">Diretor(a):</label>
+            <input type="text" id="diretor" name="diretor" th:field="*{diretor}" required><br><br>
+            <button type="submit">Atualizar</button>
+        </form>
+    </main>
+    <footer>
+        <a th:href="@{/}">
+            <p>
+                CineBar
+            </p>
+        </a>
+        <p>Contate-nos</p>
+        <p>&copy; 2024 Seus favoritos. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>

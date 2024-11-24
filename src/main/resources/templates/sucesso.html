@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineBar - página de sucesso</title>
+    <link rel="stylesheet" th:href="@{/css/layoutGeral.css}">
+    <link rel="stylesheet" th:href="@{/css/sucesso.css}">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a th:href="@{/}">
+                <img id="logo" th:src="@{/imgs/logo.png}" alt="Logo CineBar">
+            </a>
+            <ul>
+                <li><a th:href="@{/}">Home</a></li>
+                <li><a th:href="@{/preferidos}">Preferidos</a></li>
+                <li><a th:href="@{/cadastrar}">Cadastrar</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Parabéns, sua página de preferidos foi atualizada com sucesso!</h1>
+        <a th:href="@{/preferidos}"><button>Veja sua lista atualizada.</button>
+        </a>
+    </main>
+    <footer>
+        <a th:href="@{/}">
+            <p>
+                CineBar
+            </p>
+        </a>
+        <p>Contate-nos</p>
+        <p>&copy; 2024 Seus favoritos. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>

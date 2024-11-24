@@ -1,0 +1,52 @@
+@import "vars.css";
+
+h1 {
+    margin: 40px auto;
+    text-align: center;
+    color: var(--first-color);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid var(--third-color);
+    border-radius: 10px;
+    background-color: rgba(66, 62, 62, 0.1);
+}
+
+form label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--first-color);
+}
+
+form input {
+    border-radius: 10px;
+    border: 1px solid var(--third-color);
+    padding: 10px;
+    margin-bottom: 20px;
+    color: var(--first-color);
+    background-color: var(--fourth-color);
+}
+
+form button {
+    background-color: var(--third-color);
+    color: var(--fourth-color);
+    border-radius: 10px;
+    border: 1px var(--third-color);
+    padding: 10px;
+    width: 60%;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 15px auto 0;
+}
+
+form button:hover {
+    background-color: var(--fourth-color);
+    color: var(--first-color);
+    transition: 0.5s;
+}

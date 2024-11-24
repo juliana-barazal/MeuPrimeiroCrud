@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org" lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineBar</title>
+    <link rel="stylesheet" th:href="@{/css/layoutGeral.css}">
+    <link rel="stylesheet" th:href="@{/css/home.css}">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a th:href="@{/}">
+                <img id="logo" th:src="@{/imgs/logo.png}" alt="Logo CineBar">
+            </a>
+            <ul>
+                <li><a th:href="@{/}">Home</a></li>
+                <li><a th:href="@{/preferidos}">Preferidos</a></li>
+                <li><a th:href="@{/cadastrar}">Cadastrar</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <main id="main" th:style="'background-image: url(' + @{/imgs/fundo-home.jpg} + ');'">
+        <div>
+        <h1>Olá, seja bem vindo(a) ao CineBar!</h1>
+        <a th:href="@{/cadastrar}">
+            <button>Clique aqui para cadastrar um novo filme</button>
+        </a>
+        </div>
+    </main>
+
+    <footer>
+        <a th:href="@{/}">
+            <p>
+                CineBar
+            </p>
+        </a>
+        <p>Contate-nos</p>
+        <p>&copy; 2024 Seus favoritos. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>

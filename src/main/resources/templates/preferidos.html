@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineBar - Preferidos</title>
+    <link rel="stylesheet" th:href="@{/css/layoutGeral.css}">
+    <link rel="stylesheet" th:href="@{/css/preferidos.css}">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a th:href="@{/}">
+                <img id="logo" th:src="@{/imgs/logo.png}" alt="Logo CineBar">
+            </a>
+            <ul>
+                <li><a th:href="@{/}">Home</a></li>
+                <li><a th:href="@{/preferidos}">Preferidos</a></li>
+                <li><a th:href="@{/cadastrar}">Cadastrar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <h1>Filmes Preferidos</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Gênero</th>
+                    <th>Ano de lançamento</th>
+                    <th>Diretor(a)</th>
+                    <th>Atualizar</th>
+                    <th>Excluir</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Filmes listados a partir do objeto "filme" passado pelo controlador -->
+                <tr th:each="filme : ${filmes}">
+                    <td th:text="${filme.titulo}"></td>
+                    <td th:text="${filme.genero}"></td>
+                    <td th:text="${filme.ano}"></td>
+                    <td th:text="${filme.diretor}"></td>
+                    <td>
+                        <a th:href="@{'/atualizar/' + ${filme.id}}">✏️</a>
+                    </td>
+                    <td>
+                        <form th:action="@{'/deletar/' + ${filme.id}}" method="post">
+                            <input type="submit" value="🗑️">
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </main>
+
+    <footer>
+        <a th:href="@{/}">
+            <p>
+                CineBar
+            </p>
+        </a>
+        <p>Contate-nos</p>
+        <p>&copy; 2024 Seus favoritos. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+@import "vars.css";
+
+/*estilização do main*/
+
+#main{
+    width:100%;
+    height:calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+}
+
+#main div a button{
+    color:var(--first-color);
+    cursor:pointer;
+    font-weight: bold;
+    border-radius:5px;
+    padding: 20px;
+    border-width: 0.5px;
+    margin-top: 20px;
+    font-size: var(--fsize-padrao);
+}
+

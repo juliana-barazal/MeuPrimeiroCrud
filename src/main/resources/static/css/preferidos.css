@@ -1,0 +1,37 @@
+@import "vars.css";
+
+h1{
+    color:var(--first-color);
+    margin: 40px auto;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+}
+
+table {
+    width: 70%;
+    border-collapse: collapse;
+    margin: 20px;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid var(--first-color);
+}
+
+th {
+    background-color: var(--third-color);
+}
+
+td {
+    background-color: var(--fourth-color);
+    color: var(--first-color);
+}

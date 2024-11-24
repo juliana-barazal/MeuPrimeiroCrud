@@ -1,0 +1,58 @@
+@import "vars.css";
+
+*{
+    margin:0;
+    padding:0;
+    color:var(--fourth-color);
+}
+
+/*estilização do header*/
+#logo{
+    height: 60px;
+    border-radius: 50%;
+}
+
+nav{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3% 6%;
+    background-color: var(--first-color);
+    font-size: var(--font-size-nav);
+    position: sticky;
+}
+
+header nav ul {
+    display: flex;
+    gap: 20px; /* Espaçamento entre os itens */
+    list-style: none;
+    margin: 0;
+}
+
+header nav ul li a:hover {
+    color: var(--third-color);
+    transition: 0.5s;
+}
+
+li a{
+    text-decoration:none;
+    list-style: none;
+    color: var(--fourth-color);
+}
+
+/* estilização do footer */
+footer{
+    display:flex;
+    flex-direction: column;
+    padding: 3%;
+    align-items: center;
+    background-color: var(--first-color);
+    color: var(--fourth-color);
+    width:100%;
+    bottom: 0;
+}
+
+footer a{
+    text-decoration:none;
+}
+
