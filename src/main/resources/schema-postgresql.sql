@@ -3,6 +3,6 @@ CREATE TABLE IF NOT EXISTS filmes(
     id serial PRIMARY KEY, 
     titulo VARCHAR(50),
     genero VARCHAR(11),
-    ano year,
+    ano INTEGER,
     diretor VARCHAR(40)
     );
