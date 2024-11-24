@@ -3,9 +3,9 @@ server:
 
 spring:
     datasource:
-        url: jdbc:postgresql://localhost:5432/filmes?characterEncoding=UTF-8
-        username: postgres
-        password: root
+        url: jdbc:postgresql://dpg-ct196dggph6c73bgpu00-a.oregon-postgres.render.com:5432/filmes_0lra
+        username: filmes_0lra_user
+        password: 1Ty28XYeNixdfvArk3QUMyzg7Pbsd2DL
         driver-class-name: org.postgresql.Driver
         initialize: true
 
